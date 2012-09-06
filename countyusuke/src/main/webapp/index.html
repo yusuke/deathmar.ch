@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>スマートに議論を終わらせられるWebサイト - だったらだまってろクソが。 #michu</title>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://platform.twitter.com/anywhere.js?id=jGwHawqfBPyrfETcjprA&amp;v=1"
+            type="text/javascript"></script>
+
+</head>
+<body style="padding-top:35px;background-image: url(img/background.gif);background-repeat: repeat">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="http://deathmar.ch/sekachu/">Deathmar.ch</a>
+            <ul class="nav pull-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        deathmar.ch
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://deathmar.ch/ulooooo/">＼( ‘ω’)／ｳｳｵｵｵｱｱｱｱｱｱｱｰｰｰｰｰｰ!!!</a></li>
+                        <li><a href="http://deathmar.ch/sekachu/">世界の中心から愛をツイートする</a></li>
+                        <li class="active"><a href="http://deathmar.ch/michu/">だったらだまってろクソが。</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="container" style="padding:10px">
+    <div class="row">
+        <div id="tweeted" class="alert alert-success fade in" style="display:none">
+            <a class="close" data-dismiss="alert">x</a>
+            ツイートしました！
+        </div>
+        <div class="span12">
+            <div id="tweetbox"></div>
+            <script type="text/javascript">
+                twttr.anywhere(function (T) {
+                    T("#tweetbox").tweetBox({
+                        height:50, width:300,
+                        label:"",
+                        count:false,
+                        defaultContent:"だったらだまってろクソが。 deathmar.ch/michu/ #michu",
+                        onTweet:function (P, H) {
+                            $("#tweetbox").hide();
+                            $("#tweeted").show();
+                        }
+                    });
+                });
+            </script>
+            <!-- social buttons -->
+            <br/>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-via="yusuke"
+               data-lang="ja">ツイート</a>
+            <script>!function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//platform.twitter.com/widgets.js";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }
+            }(document, "script", "twitter-wjs");</script>
+            <a href="http://b.hatena.ne.jp/entry/http://deathmar.ch/michu/" class="hatena-bookmark-button"
+               data-hatena-bookmark-title="スマートに議論を終わらせられるWebサイト - だったらだまってろクソが。 #michu" data-hatena-bookmark-layout="standard"
+               title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif"
+                                                 alt="このエントリーをはてなブックマークに追加" width="20" height="20"
+                                                 style="border: none;"/></a>
+            <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
+                    async="async"></script>
+
+
+            <!-- search widget -->
+            <br/>
+            <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script>
+                new TWTR.Widget({
+                    version:2,
+                    type:'search',
+                    search:'#michu',
+                    interval:30000,
+                    title:'#michu',
+                    subject:'',
+                    width:300,
+                    height:300,
+                    theme:{
+                        shell:{
+                            background:'#8ec1da',
+                            color:'#ffffff'
+                        },
+                        tweets:{
+                            background:'#ffffff',
+                            color:'#444444',
+                            links:'#1985b5'
+                        }
+                    },
+                    features:{
+                        scrollbar:false,
+                        loop:true,
+                        live:true,
+                        behavior:'default'
+                    }
+                }).render().start();
+            </script>
+            <br>
+            <br>
+            ・<a href="http://togetter.com/li/326088">高木浩光大先生様のスマートな議論の終わらせ方 - Togetter</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.1.0/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-262260-7']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+</html>
