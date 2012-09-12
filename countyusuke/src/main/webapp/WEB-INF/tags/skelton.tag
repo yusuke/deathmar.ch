@@ -12,9 +12,6 @@
           rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <style>
-        .twtr-widget {
-            text-align: center;
-        }
         .progress {
             text-align: center;
             margin: auto;
@@ -103,41 +100,24 @@
                                                  style="border: none;"/></a>
             <script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8"
                     async="async"></script>
+            <br>
 
 
             <!-- search widget -->
-            <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-            <script>
-                new TWTR.Widget({
-                    version:2,
-                    type:'search',
-                    search:'#countyusuke',
-                    interval:30000,
-                    title:'#countyusuke',
-                    subject:'',
-                    width:300,
-                    height:300,
-                    theme:{
-                        shell:{
-                            background:'#8ec1da',
-                            color:'#ffffff'
-                        },
-                        tweets:{
-                            background:'#ffffff',
-                            color:'#444444',
-                            links:'#1985b5'
-                        }
-                    },
-                    features:{
-                        scrollbar:false,
-                        loop:true,
-                        live:true,
-                        behavior:'default'
-                    }
-                }).render().start();
-            </script>
+            <a class="twitter-timeline" data-dnt=true href="https://twitter.com/search?q=%23countyusuke" data-widget-id="245708646707773440">#countyusuke に関するツイート</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
+    <script type="text/javascript">
+        function setWidgetWidth() {
+            if ($("#twitter-widget-1").length > 0) {
+                $("#twitter-widget-1")[0].width = "300px";
+            } else {
+                setTimeout(setWidgetWidth, 500);
+            }
+        }
+        setWidgetWidth();
+    </script>
 </div>
 <script type="text/javascript">
 
