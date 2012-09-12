@@ -3,14 +3,27 @@
             xmlns="urn:infinispan:config:5.1">
     <global/>
     <namedCache name="xml-configured-cache">
-        <loaders passivation="false" shared="false" preload="true">
+        <loaders passivation="false" shared="true" preload="true">
             <loader class="org.infinispan.loaders.file.FileCacheStore"
                     fetchPersistentState="true" ignoreModifications="false"
                     purgeOnStartup="false">
                 <properties>
-                    <property name="location" value="store"/>
+                    <property name="location" value="/Users/yusuke/store/"/>
                 </properties>
             </loader>
         </loaders>
+    </namedCache>
+    <namedCache name="temporary-cache">
+        <loaders passivation="false" shared="true" preload="true">
+            <loader class="org.infinispan.loaders.file.FileCacheStore"
+                    fetchPersistentState="true" ignoreModifications="false"
+                    purgeOnStartup="false">
+                <properties>
+                    <property name="location" value="/Users/yusuke/store/"/>
+                </properties>
+            </loader>
+        </loaders>
+        <expiration wakeUpInterval="500"/>
+        <eviction maxEntries="2000" strategy="LRU"/>
     </namedCache>
 </infinispan>

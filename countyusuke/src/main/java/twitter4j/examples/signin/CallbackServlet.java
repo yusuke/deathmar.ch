@@ -27,8 +27,10 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 package twitter4j.examples.signin;
 
 import ch.deathmar.CountYusuke;
+import ch.deathmar.Store;
 import twitter4j.Twitter;
 import twitter4j.TwitterException;
+import twitter4j.TwitterFactory;
 import twitter4j.auth.RequestToken;
 
 import javax.servlet.ServletException;
@@ -41,13 +43,14 @@ public class CallbackServlet extends HttpServlet {
     private static final long serialVersionUID = 1657390011452788111L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Twitter twitter = (Twitter) request.getSession().getAttribute("twitter");
-        RequestToken requestToken = (RequestToken) request.getSession().getAttribute("requestToken");
+        RequestToken requestToken = (RequestToken) Store.getTemporal(request.getParameter("oauth_token"));
         String verifier = request.getParameter("oauth_verifier");
         try {
+            Twitter twitter = new TwitterFactory().getInstance();
             twitter.getOAuthAccessToken(requestToken, verifier);
             CountYusuke countYusuke = new CountYusuke();
             countYusuke.count(twitter);
+            request.getSession().setAttribute("twitter", twitter);
             request.getSession().setAttribute("progress", countYusuke);
             request.getSession().removeAttribute("requestToken");
         } catch (TwitterException e) {
