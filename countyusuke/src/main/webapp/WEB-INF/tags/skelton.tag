@@ -104,20 +104,10 @@
 
 
             <!-- search widget -->
-            <a class="twitter-timeline" data-dnt=true href="https://twitter.com/search?q=%23countyusuke" data-widget-id="245708646707773440">#countyusuke に関するツイート</a>
+            <a class="twitter-timeline" data-dnt=true href="https://twitter.com/search?q=%23countyusuke" data-widget-id="245708646707773440" width="300px">#countyusuke に関するツイート</a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
         </div>
     </div>
-    <script type="text/javascript">
-        function setWidgetWidth() {
-            if ($("#twitter-widget-1").length > 0) {
-                $("#twitter-widget-1")[0].width = "300px";
-            } else {
-                setTimeout(setWidgetWidth, 500);
-            }
-        }
-        setWidgetWidth();
-    </script>
 </div>
 <script type="text/javascript">
 

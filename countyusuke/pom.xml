@@ -74,9 +74,9 @@
                         <connector implementation="org.eclipse.jetty.ajp.Ajp13SocketConnector">
                             <port>9999</port>
                         </connector>
-                        <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>9998</port>
-                        </connector>
+                        <!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
+                            <!--<port>8080</port>-->
+                        <!--</connector>-->
                     </connectors>
                     <webApp>
                         <contextPath>/countyusuke</contextPath>
