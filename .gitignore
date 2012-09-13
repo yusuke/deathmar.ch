@@ -4,6 +4,8 @@ countyusuke/target/*
 countyusuke/src/test/resources/twitter4j.properties
 countyusuke/src/main/resources/twitter4j.properties
 countyusuke/store/*
+aiueo/src/test/resources/twitter4j.properties
+aiueo/src/main/resources/twitter4j.properties
 .DS_Store
 .idea
 sync.sh
